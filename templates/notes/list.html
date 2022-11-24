@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Заметки</title>
+</head>
+<body>
+
+{% for note in object_list %}
+    <div style="border: 1px solid black; margin: 10px">
+        <p>{{ note.title }}</p>
+        <p>{{ note.text }}</p>
+        <p>{{ note.user.username }}</p>
+        <p>{{ note.created_at }}</p>
+    </div>
+{% endfor %}
+
+</body>
+</html>
