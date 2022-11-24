@@ -1,0 +1,28 @@
+POST http://localhost:8000/api/auth/token/login/
+
+{
+"username": "admin",
+"password": "develop"
+}
+
+###
+
+GET http://localhost:8000/api/notes/
+
+###
+
+GET http://localhost:8000/api/notes/
+Authorization: Token c0e8137f825d65a0691a7923b7b44f491fee46eb
+
+###
+
+POST http://localhost:8000/api/notes/
+Content-Type: application/json
+Authorization: Token c0e8137f825d65a0691a7923b7b44f491fee46eb
+
+{
+  "text": "from api",
+  "title": "required title",
+  "is_public": false,
+  "photos": ["1", "2", "3"]
+}
